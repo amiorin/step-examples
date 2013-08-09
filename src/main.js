@@ -41,7 +41,7 @@ step(
     h.get('/h.json').pipe(es.wait(this.parallel()));
     h.get('/i.json').pipe(es.wait(this.parallel()));
   },
-  function(err) {
+  function() {
     var group = this.group();
     var results =Array.prototype.slice.call(arguments, 1);
     results.forEach(function(body) {
