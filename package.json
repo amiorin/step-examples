@@ -12,10 +12,10 @@
     "grunt": "~0.4.1",
     "step": "0.0.5",
     "grunt-watchify": "~0.1.0",
-    "grunt-contrib-livereload": "~0.1.2",
     "grunt-contrib-connect": "~0.3.0",
-    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-watch": "~0.5.3",
     "hyperquest": "~0.1.7",
-    "event-stream": "~3.0.16"
+    "event-stream": "~3.0.16",
+    "connect-livereload": "~0.3.0"
   }
 }

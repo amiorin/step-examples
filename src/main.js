@@ -1,9 +1,8 @@
 'use strict';
 
-var h = require('hyperquest');
+var h    = require('hyperquest');
 var step = require('step');
-var es = require('event-stream');
-
+var es   = require('event-stream');
 
 step(
   function() {

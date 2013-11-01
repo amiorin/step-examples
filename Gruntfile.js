@@ -9,8 +9,8 @@
 'use strict';
 
 var path = require('path');
+var connectLivereload = require('connect-livereload');
 
-var lrSnippet  = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 var mountFolder = function(connect, dir) {
   return connect.static(path.resolve(dir));
 };
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
         options: {
           middleware: function (connect) {
             return [
-              lrSnippet,
+              connectLivereload(),
               mountFolder(connect, 'app')
             ];
           }
@@ -58,7 +58,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-livereload');
   grunt.loadNpmTasks('grunt-watchify');
 
   grunt.registerTask('default', ['watchify', 'connect', 'watch']);
